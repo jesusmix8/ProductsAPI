@@ -7,8 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const productosEtiquetasAggRoutes = require("./routes/productos_etiquetas_aggregate.routes");
+app.use("/api/productos/etiquetas", productosEtiquetasAggRoutes);
+
 // Rutas
 app.use("/api/productos", require("./routes/productos.routes"));
+app.use("/api/etiquetas", require("./routes/etiquetas.routes"));
+app.use("/api/productos/:id/etiquetas", require("./routes/producto_etiquetas.routes"));
 /*
 app.use("/api/categorias", require("./routes/categorias.routes"));
 app.use("/api/etiquetas", require("./routes/etiquetas.routes"));
