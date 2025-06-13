@@ -1,4 +1,5 @@
 
 #ignorar las variables de entorno
+/.env
 .env
 
