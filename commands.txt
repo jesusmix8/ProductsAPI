@@ -1,0 +1,23 @@
+GET http://localhost:3000/api/etiquetas
+Devuelve un array con todas las etiquetas.
+
+GET http://localhost:3000/api/etiquetas/3
+Devuelve la etiqueta cuyo id_etiqueta = 3.
+
+GET http://localhost:3000/api/productos/5/etiquetas
+Devuelve las etiquetas del producto 5.
+
+GET http://localhost:3000/api/productos/etiquetas
+Devuelve cada producto con un array de sus etiquetas.
+
+POST http://localhost:3000/api/etiquetas
+Crea una etiqueta; body JSON: { "nombre": "XYZ" }.
+
+PUT http://localhost:3000/api/etiquetas/3
+Actualiza la etiqueta 3; body JSON: { "nombre": "Nuevo" }.
+
+DELETE http://localhost:3000/api/etiquetas/3
+Borra la etiqueta con ID 3.
+
+POST http://localhost:3000/api/productos/5/etiquetas
+Asigna etiquetas al producto 5; body JSON: { "etiquetas": [1,4,7] }.
