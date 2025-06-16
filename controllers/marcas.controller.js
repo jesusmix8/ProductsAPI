@@ -1,5 +1,4 @@
 const MarcaModel = require("../models/marcas.model");
-console.log("📦 Controller de marcas cargadas");
 const MarcaController = {
   getAll: async (req, res) => {
     try {

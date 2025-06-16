@@ -1,5 +1,4 @@
 const pool = require("./db");
-console.log("📦 Model  de marcas cargadas");
 
 const MarcaModel = {
   getAll: async () => {

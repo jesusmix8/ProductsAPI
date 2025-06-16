@@ -5,7 +5,7 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "API Tienda en Línea",
+      title: "API Productos tienda en linea",
       version: "1.0.0",
       description:
         "Documentación de la API de productos, marcas, categorías, etc.",
@@ -16,7 +16,7 @@ const options = {
       },
     ],
   },
-  apis: ["./routes/*.js"], // Aquí busca los comentarios tipo Swagger
+  apis: ["./routes/*.js"],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
