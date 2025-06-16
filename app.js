@@ -3,6 +3,11 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./swagger");
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 // Middlewares
 app.use(cors());
 app.use(express.json());
@@ -19,6 +24,7 @@ app.use(
 );
 app.use("/api/categorias", require("./routes/categorias.routes"));
 app.use("/api/marcas", require("./routes/marcas.routes"));
+
 /*
 app.use("/api/imagenes", require("./routes/imagenes.routes"));
 app.use("/api/usuarios", require("./routes/usuarios.routes"));
