@@ -24,11 +24,11 @@ app.use(
 );
 app.use("/api/categorias", require("./routes/categorias.routes"));
 app.use("/api/marcas", require("./routes/marcas.routes"));
+app.use("/api/usuarios", require("./routes/usuarios.routes"));
+app.use("/api/vendedores", require("./routes/vendedores.routes"));
 
 /*
 app.use("/api/imagenes", require("./routes/imagenes.routes"));
-app.use("/api/usuarios", require("./routes/usuarios.routes"));
-app.use("/api/vendedores", require("./routes/vendedores.routes"));
 app.use("/api/variaciones", require("./routes/variaciones.routes"));
 */
 
